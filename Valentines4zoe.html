@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valentine's Day Invitation</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head> 
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="header-text">HIII BABYYYY</h1>
+                <h1 class="header-text">Will you be my valentines? :)</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3lqMmoxNzZrM2Y4MGE5anNoMnFmMTBua3djN3dhd3Q2cWgwdDh6MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Y1eRcnAP3dvgeKhhx6/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            </div>
+        </div>
+        <script>
+            function nextPage() {
+                window.location.href = "yes.html";
+            }
+            
+            function moveButton() {
+                var noButton = document.getElementById('noButton');
+                noButton.style.position = 'absolute';
+                var x = Math.random() * (window.innerWidth - noButton.offsetWidth) - 85;
+                var y = Math.random() * (window.innerHeight - noButton.offsetHeight) - 48;
+                noButton.style.left = `${x}px`;
+                noButton.style.top = `${y}px`;
+            }
+        </script> 
+    </body> 
+</html>
